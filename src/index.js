@@ -12,6 +12,11 @@ const countryInfo = document.querySelector('.country-info');
 
 const onCountryFormInput = event => {
   const countryName = searchBox.value.trim();
+  if (!countryName) {
+    countryList.innerHTML = '';
+    countryInfo.innerHTML = '';
+    return;
+  }
   fetchCountries(countryName)
     .then(data => {
       if (data.length > 10) {
