@@ -27,7 +27,6 @@ const onCountryFormInput = event => {
         countryListFoo(data);
       } else if (data.length === 1) {
         countryInfoFoo(data);
-      } else if (data.length === 0) {
       }
     })
     .catch(err => {
